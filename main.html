@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- favicon-->
+    <link rel="stylesheet" href="maincss.css" />
+    <script src = "script12.js"></script>
+    <title>
+    PORTFOLIO
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header><nav>
+        <div class="tab-container">
+            <a href="#section1" >Home</a>
+            <a href="#about">About me</a>
+            <a href="#section2"> Academic Qualifications</a>
+            <a href="#section3">Contact Me</a>
+        </div>
+    </nav>
+    </header>
+        
+        <div class="typing-container">
+            Hi, I'm Sai Adithyaa,<br>a passionate Full Stack Developer.
+        </div>
+       
+        
+        <div id="about">
+            <h1 > ABOUT ME</h1> 
+            Hello! I’m sai Adithyaa,<br>a passionate Full Stack Developer<br>with a keen interest in HTML,
+            CSS, and JavaScript.<br>My journey in web development began with curiosity about how the web works,<br>and
+            I’ve been captivated ever since.<br>Crafting webpages, solving puzzles, and continuous learning drive me
+            forward.<br>Let’s connect and build amazing things together! 🚀🌟
+        </div>
+        
+        <div id = "section2">
+            <h1 id = "center"> Acdemic Qualifications</h1>
+        
+        <table>
+            <tr>
+            <th> S.NO</th>
+            <th> INSTITUTION/UNIVERSITY</th>
+            <th> DEGREE</th>
+            <th> YEAR</th>
+            <th> CGPA/PERCENTAGE</th>
+            </tr>
+            <tr>
+                <td> 1</td>
+                <td> AMRITA VISHWA VIDYAPEETHAM</td>
+                <td> B.TECH IN COMPUTER SCIENCE ENGINEERING</td>
+                <td> 2023-2027</td>
+                <td> 8.67</td>
+            </tr>
+            <tr>
+                <td> 2</td>
+                <td> DAV SCHOOL</td>
+                <td> HIGHER SECONDARY EDUCATION(12TH)</td>
+                <td> 2021-2023</td>
+                <td> 94%</td>
+            </tr>
+            <tr>
+                <td> 3</td>
+                <td> DAV SCHOOL</td>
+                <td> SECONDARY EDUCATION(10TH)</td>
+                <td> 2019-2021</td>
+                <td> 98%</td>
+        </table>
+        <div id = "section3">
+            <form id="contactForm">
+                <h2>Contact me</h2>
+                <input type="text" id="name" placeholder="Your Name"><br><br>
+                <input type="text" id="email" placeholder="Your Email"><br><br>
+                <input type="text" id="phone" placeholder="Your Mobile Number"><br><br>
+                <textarea id="message" cols="35" rows="10" placeholder="How Can I Help You"></textarea><br>
+                <input type="submit" value="Send Message" class="submit">
+            </form>
+        </div>
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+        
+                // Validate name
+                const name = document.getElementById("name").value.trim();
+                if (name === "") {
+                    alert("Please enter your name.");
+                    return false;
+                }
+        
+                // Validate email
+                const email = document.getElementById("email").value.trim();
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return false;
+                }
+        
+                // Validate phone number
+                const phone = document.getElementById("phone").value.trim();
+                const phonePattern = /^\d{10}$/; // Assuming a 10-digit phone number
+                if (!phonePattern.test(phone)) {
+                    alert("Please enter a valid 10-digit phone number.");
+                    return false;
+                }
+        
+                // Validate message
+                const message = document.getElementById("message").value.trim();
+                if (message === "") {
+                    alert("Please enter your message.");
+                    return false;
+                }
+        
+                // Form validation passed, you can submit the form
+                alert("Form submitted successfully!");
+                document.getElementById("contactForm").reset(); // Optionally reset the form after submission
+            });
+        </script>
+   
+
+    
+
+</body>
+
+</html>
